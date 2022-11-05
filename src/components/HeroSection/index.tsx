@@ -17,7 +17,7 @@ export default function HeroSection() {
     },
   ];
   return (
-    <section className="min-h-screen w-full lg:flex gap-5 items-center justify-center py-8 lg:py-24 overflow-hidden bg-zinc-900">
+    <section id="inicio" className="min-h-screen w-full lg:flex gap-5 items-center justify-center py-8 lg:py-24 overflow-hidden bg-zinc-900">
       <div className="flex-1 flex justify-center items-center mt-28 lg:mt-6 relative">
         <Tilt className="Tilt z-10" options={{ max: 25 }}>
           <div
@@ -48,7 +48,7 @@ export default function HeroSection() {
           <h1 className="text-3xl mb-2">
             Olá,{" "}
             <div className="text-green-500 inline">
-              eu sou o <b className="text-4xl lg:text-5xl font-bold">Luiz Fernando</b>
+              eu sou o <b className="text-3xl md:text-4xl xl:text-5xl font-bold">Luiz Fernando</b>
             </div>{" "}
           </h1>
 
@@ -64,7 +64,7 @@ export default function HeroSection() {
             wrapper="h2"
             cursor={true}
             repeat={Infinity}
-            className="text-2xl lg:text-4xl"
+            className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl"
           />
           <p className="text-1xl indent-4">
             Possuo quase 4 anos de estudos relacionados a desenvolvimento de

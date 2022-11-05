@@ -36,8 +36,8 @@ export default function WhatIDo() {
     },
   ];
   return (
-    <section className="bg-black py-8 rounded-xl mx-8 grid items-center justify-center shadow-lg shadow-black overflow-hidden relative">
-      <h2 className="text-4xl text-center font-bold text-green-500 mb-6">
+    <section id="servicos" className="bg-black py-8 rounded-xl mx-8 grid items-center justify-center shadow-lg shadow-black overflow-hidden relative">
+      <h2 className="text-4xl text-center font-bold text-green-500 mb-6 scroll-pt-4">
         O que eu faço?
       </h2>
       <div className="absolute bg-gradient-to-r from-black flex h-full w-1/12 z-20"/>

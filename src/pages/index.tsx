@@ -15,6 +15,8 @@ export default function Home() {
       <Header/>
       <HeroSection />
       <WhatIDo />
+      <Projects/>
+      <Contact/>
     </div>
   )
 }

@@ -4,8 +4,7 @@ export default function Header() {
   const navbarItens = [
     { title: "Início", url: "#inicio" },
     { title: "Serviços", url: "#servicos" },
-    { title: "Trabalhos", url: "#trabalhos" },
-    { title: "Contato", url: "#contato" },
+    { title: "Projetos", url: "#projetos" },
   ];
   const [small, setSmall] = useState(false);
 
@@ -18,7 +17,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full backdrop backdrop-blur-md z-30 transition-all duration-500 ${
+    <header className={`fixed w-full backdrop backdrop-blur-md z-30 transition-all duration-500 overflow-x-scroll md:overflow-x-hidden ${
       small ? "py-4 bg-black bg-opacity-30" : "py-6"
     }`}>
       <nav>
