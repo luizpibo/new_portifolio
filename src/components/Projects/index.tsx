@@ -6,8 +6,8 @@ export default function Projects() {
   const projectsContent = [
     { urlImage: "/busca_clima.png", title: "Buscar clima", description: "Projeto criado para consumir a API de previsão climática e consultar o clima de algum lugar.", link: "https://github.com/luizpibo/busca_clima/" },
     { urlImage: "/GoChamp.png", title: "GoChamp", description: "Projeto desenvolvido para a matéria de programação para web.", link: "https://github.com/luizpibo/GoChamp" },
-    { urlImage: "/grid.png", title: "grid", description: "Projeto feito no curso da Alura sobre display grid.", link: "https://github.com/luizpibo/display_grid" },
-    { urlImage: "/upixels.png", title: "titulo", description: "Plataforma criada para consultar pixels de granadas do CS:GO (Fiz a home page e estamos planejando atualizar a plataforma).", link: "https://upixels.com.br/" },
+    { urlImage: "/grid.png", title: "Grid", description: "Projeto feito no curso da Alura sobre display grid.", link: "https://github.com/luizpibo/display_grid" },
+    { urlImage: "/upixels.png", title: "Upixels", description: "Plataforma criada para consultar pixels de granadas do CS:GO (Fiz a home page e estamos planejando atualizar a plataforma).", link: "https://upixels.com.br/" },
   ];
   return (
     <section id="projetos" className="py-6 text-center">
