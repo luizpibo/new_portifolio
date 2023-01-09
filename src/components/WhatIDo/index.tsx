@@ -6,32 +6,26 @@ export default function WhatIDo() {
   const cardsContent = [
     {
       title: "Desenvolvedor React",
-      text: "alguma coisa que eu vou ter que escrever",
       imageUrl: "/reactjs-icon.svg",
     },
     {
       title: "Desenvolvedor Node",
-      text: "alguma coisa que eu vou ter que escrever",
       imageUrl: "/nodejs-icon.svg",
     },
     {
       title: "Desenvolvedor Spring boot",
-      text: "alguma coisa que eu vou ter que escrever",
       imageUrl: "/spring-icon.svg",
     },
     {
       title: "Desenvolvedor Front-end",
-      text: "alguma coisa que eu vou ter que escrever",
       imageUrl: "/front-icon.svg",
     },
     {
       title: "Desenvolvedor Back-end",
-      text: "alguma coisa que eu vou ter que escrever",
       imageUrl: "/back-icon.svg",
     },
     {
       title: "UX | IU Designer",
-      text: "alguma coisa que eu vou ter que escrever",
       imageUrl: "/ux-icon.svg",
     },
   ];
@@ -67,7 +61,6 @@ export default function WhatIDo() {
               <div className="py-10 px-6 bg-zinc-900 rounded-lg h-60">
                 <img src={card.imageUrl} alt={card.title+" Icon"} className="h-16 mx-auto"/>
                 <h3 className="text-3xl mt-4 text-center">{card.title}</h3>
-                <p>{card.text}</p>
               </div>
             </SplideSlide>
           );
