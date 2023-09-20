@@ -18,11 +18,11 @@ const Header:React.FC<IProps> = ({navbarItens}) => {
   }, []);
 
   return (
-    <header className={`fixed w-full backdrop backdrop-blur-lg z-30 transition-all duration-500 overflow-x-scroll md:overflow-x-hidden ${
+    <header className={`fixed w-full backdrop backdrop-blur-lg z-30 transition-all duration-500 overflow-x-scroll md:overflow-x-hidden left-0 right-0 mx-auto ${
       small ? "py-4 bg-black bg-opacity-30" : "py-6"
     }`}>
       <nav>
-        <ul className="flex gap-6 text-2xl justify-center lg:justify-end px-8 my-auto items-center">
+        <ul className="flex gap-6 text-2xl justify-center lg:justify-end px-8 my-auto items-center max-w-6xl">
          {navbarItens.map((item)=>{
             return (
                 <li className="hover:text-green-300 transition" key={item.title}><a href={item.url}>{item.title}</a></li>

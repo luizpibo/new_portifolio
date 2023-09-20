@@ -11,7 +11,7 @@ export interface IProps extends React.HTMLProps<HTMLDivElement>{
 
 const WhatIDo:React.FC<IProps> = ({props}) => {
   return (
-    <div id="servicos" className="bg-black py-8 rounded-xl mx-8 grid items-center justify-center shadow-lg shadow-black overflow-hidden relative">
+    <div id="servicos" className="bg-black py-8 rounded-xl mx-8 mt-16 grid items-center justify-center shadow-lg shadow-black overflow-hidden relative">
       <h2 className="text-4xl text-center font-bold text-green-500 mb-6 scroll-pt-4">
         O que eu faço?
       </h2>
