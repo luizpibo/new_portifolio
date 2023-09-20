@@ -1,36 +1,17 @@
+'use client'
+
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import React from "react";
+import Image from "next/image";
 
-export default function WhatIDo() {
-  const cardsContent = [
-    {
-      title: "Desenvolvedor React",
-      imageUrl: "/reactjs-icon.svg",
-    },
-    {
-      title: "Desenvolvedor Node",
-      imageUrl: "/nodejs-icon.svg",
-    },
-    {
-      title: "Desenvolvedor Spring boot",
-      imageUrl: "/spring-icon.svg",
-    },
-    {
-      title: "Desenvolvedor Front-end",
-      imageUrl: "/front-icon.svg",
-    },
-    {
-      title: "Desenvolvedor Back-end",
-      imageUrl: "/back-icon.svg",
-    },
-    {
-      title: "UX | IU Designer",
-      imageUrl: "/ux-icon.svg",
-    },
-  ];
+
+export interface IProps extends React.HTMLProps<HTMLDivElement>{
+  props: {title: string, imageUrl: string}[]
+}
+
+const WhatIDo:React.FC<IProps> = ({props}) => {
   return (
-    <section id="servicos" className="bg-black py-8 rounded-xl mx-8 grid items-center justify-center shadow-lg shadow-black overflow-hidden relative">
+    <div id="servicos" className="bg-black py-8 rounded-xl mx-8 grid items-center justify-center shadow-lg shadow-black overflow-hidden relative">
       <h2 className="text-4xl text-center font-bold text-green-500 mb-6 scroll-pt-4">
         O que eu faço?
       </h2>
@@ -55,11 +36,11 @@ export default function WhatIDo() {
         }}
         extensions={{ AutoScroll }}
       >
-        {cardsContent.map((card) => {
+        {props.map((card) => {
           return (
             <SplideSlide key={card.title} style={{width: "fit-content"}}>
               <div className="py-10 px-6 bg-zinc-900 rounded-lg h-60">
-                <img src={card.imageUrl} alt={card.title+" Icon"} className="h-16 mx-auto"/>
+                <Image src={card.imageUrl} alt={card.title+" Icon"} className="h-16 mx-auto" height={50} width={50}/>
                 <h3 className="text-3xl mt-4 text-center">{card.title}</h3>
               </div>
             </SplideSlide>
@@ -67,6 +48,8 @@ export default function WhatIDo() {
         })}
       </Splide>
       <div className="absolute right-0 bg-gradient-to-l from-black flex h-full w-1/12 z-20"/>
-    </section>
+    </div>
   );
 }
+
+export default WhatIDo

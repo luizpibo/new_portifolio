@@ -1,5 +1,7 @@
+'use client'
+
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 import spinningAnimation from "./spinningAnimation.json";
 import Lottie from "lottie-react-web";
 import Tilt from "react-tilt";
@@ -17,56 +19,47 @@ export default function HeroSection() {
     },
   ];
   return (
-    <section id="inicio" className="min-h-screen w-full lg:flex gap-5 items-center justify-center py-8 lg:py-24 overflow-hidden bg-zinc-900">
-      <div className="flex-1 flex justify-center items-center mt-28 lg:mt-6 relative">
-        <Tilt className="Tilt z-10" options={{ max: 25 }}>
+    <section id="inicio" className="min-h-screen grid grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 items-center justify-center pt-20 pb-10 lg:py-24 relative overflow-hidden">
+      <div className="relative w-full h-full z-10">
+        <Tilt className="Tilt flex w-full h-full" options={{ max: 25 }}>
           <div
-            className="flex items-center justify-center m-auto relative p-4 rotate-45 bg-green-500 overflow-hidden w-72 h-72 lg:w-96 lg:h-96 shadow-zinc-700 shadow-2xl"
-            style={{
-              borderTopRightRadius: "5rem",
-              borderBottomLeftRadius: "5rem",
-            }}
+            className="flex items-center justify-center w-80 h-80 m-auto relative"
           >
             <Image
-              className="m-auto -rotate-45"
+              className="bg-green-500 p-3 bg-opacity-20 h-fit rounded-xl"
               src="/profile_picture.jpeg"
-              layout="fill"
+              objectFit="contain"
+              fill
               alt="Foto do luiz"
             />
           </div>
         </Tilt>
-        <div className="absolute scale-150 z-0">
-          <Lottie
-            options={{
-              animationData: spinningAnimation,
-            }}
-          />
-        </div>
       </div>
-      <div className="flex flex-col flex-1 gap-8">
-        <div className="flex-col flex mt-16 lg:mt-0 mx-4 lg:mx-10 p-4 gap-3 backdrop:backdrop-blur z-10 bg-opacity-25 bg-gray-500 rounded-lg shadow-lg">
-          <h1 className="text-3xl mb-2">
-            Olá,{" "}
-            <div className="text-green-500 inline">
-              eu sou o <b className="text-3xl md:text-4xl xl:text-5xl font-bold">Luiz Fernando</b>
+      <div className="flex flex-col gap-8 relative w-full h-full justify-center items-center">
+        <div className="flex-col flex lg:mt-0 p-3 md:p-6 py-10 lg:p-10 gap-6 z-10 max-w-4xl rounded-2xl backdrop-blur-md">
+          <h1 className="text-4xl lg:text-5xl mb-2 text-center font-bold">
+            Olá,{" "}eu sou o
+            <div className="text-green-400 inline">
+              <br/><b className="text-5xl md:text-6xl font-bold">Luiz Fernando</b>
             </div>{" "}
           </h1>
-
-          <TypeAnimation
-            sequence={[
-              "Desenvolvedor Front-end", // Types 'One'
-              1500, // Waits 1s
-              "Desenvolvedor Back-end", // Deletes 'One' and types 'Two'
-              1500, // Waits 2s
-              "Desenvolvedor UX", // Types 'Three' without deleting 'Two'
-              1500,
-            ]}
-            wrapper="h2"
-            cursor={true}
-            repeat={Infinity}
-            className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl"
-          />
-          <p className="text-1xl indent-4">
+          <div className="h-16">
+            <TypeAnimation
+              sequence={[
+                "Desenvolvedor Front-end", // Types 'One'
+                1500, // Waits 1s
+                "Desenvolvedor Back-end", // Deletes 'One' and types 'Two'
+                1500, // Waits 2s
+                "Desenvolvedor UX", // Types 'Three' without deleting 'Two'
+                1500,
+              ]}
+              wrapper="h2"
+              cursor={true}
+              repeat={Infinity}
+              className="text-3xl lg:text-3xl xl:text-5xl text-center"
+            />
+          </div>
+          <p className="text-1xl md:text-2xl indent-4">
             Possuo quase 4 anos de estudos relacionados a desenvolvimento de
             software, obtive esses conhecimentos com a ajuda de livros, cursos e
             faculdade. Estou prestes a me formar em bacharelado em ciência da
@@ -75,33 +68,44 @@ export default function HeroSection() {
             para o front-end e node para o back-end. Agora estou estudando
             back-end usando spring boot, UX e microsserviços.
           </p>
-          <a
+          <Link
             href="#contato"
-            className="py-4 px-6 transition bg-green-500 rounded-md w-fit self-center mt-6 hover:shadow-zinc-700 hover:shadow-md hover:scale-105 font-semibold"
+            className="py-4 px-6 md:text-3xl transition bg-green-700 rounded-md w-fit self-center hover:shadow-zinc-700 hover:shadow-xl hover:scale-105 font-semibold"
           >
             Entre em contato
-          </a>
-          <div className="flex min-h-5"></div>
+          </Link>
+          <ul className="flex gap-8 self-center">
+            {socialMidiaButtons.map((socialMidia) => {
+              return (
+                <li
+                  key={socialMidia.link}
+                  className="hover:scale-110 transition-all"
+                >
+                  <Link href={socialMidia.link}>
+                    <Image
+                      src={socialMidia.icon}
+                      alt="social midia icon"
+                      height={50}
+                      width={50}
+                    />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
-        <ul className="flex gap-8 self-center">
-          {socialMidiaButtons.map((socialMidia) => {
-            return (
-              <li
-                key={socialMidia.link}
-                className="hover:scale-110 transition-all"
-              >
-                <a href={socialMidia.link}>
-                  <img
-                    src={socialMidia.icon}
-                    alt="social midia icon"
-                    height={50}
-                    width={50}
-                  />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+      </div>
+      <div className="absolute mx-auto z-0 bg-center top-0 bottom-0 left-0 right-0 scale-100 lg:scale-100 xl:scale-75">
+        <Lottie
+          options={{
+            rendererSettings: {
+              preserveAspectRatio: 'xMidYMid slice'
+            },
+            animationData: spinningAnimation,
+          }}
+          height="100%"
+          width="100%"
+        />
       </div>
     </section>
   );
