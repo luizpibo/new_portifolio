@@ -22,7 +22,7 @@ const Header:React.FC<IProps> = ({navbarItens}) => {
       small ? "py-4 bg-black bg-opacity-30" : "py-6"
     }`}>
       <nav>
-        <ul className="flex gap-6 text-2xl justify-center lg:justify-end px-8 my-auto items-center max-w-6xl">
+        <ul className="flex gap-6 text-2xl justify-center px-8 my-auto items-center max-w-6xl self-center mx-auto">
          {navbarItens.map((item)=>{
             return (
                 <li className="hover:text-green-300 transition" key={item.title}><a href={item.url}>{item.title}</a></li>

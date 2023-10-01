@@ -11,55 +11,26 @@ export default function Projects() {
     { urlImage: "/upixels.png", title: "Upixels", description: "Plataforma criada para consultar pixels de granadas do CS:GO (Fiz a home page e estamos planejando atualizar a plataforma).", link: "https://upixels.com.br/" },
   ];
   return (
-    <section id="projetos" className="py-6 text-center">
+    <section id="projetos" className="py-6 text-center bg-zinc-900 bg-opacity-50 rounded-lg">
       <h2 className="text-4xl my-6 scroll-pt-4">
         <b className="text-green-500">Projetos</b> Recentes
       </h2>
-      <p className="text-2xl">Alguns projetos que eu desenvolvi</p>
-      <Splide
-        options={{
-          perPage: 3,
-          autoplay: true,
-          interval: 2000,
-          rewind: true,
-          autoHeight: true,
-          gap: "1rem",
-          lazyLoad: "nearby",
-          padding: {
-            left: "1rem",
-            right: "1rem"
-          },
-          breakpoints: {
-            640: {
-              perPage: 2,
-            },
-            400: {
-              perPage: 1
-            }
-          }
-        }}
-      >
-        {projectsContent.map((project, index) => {
+      <div className="grid grid-cols-1 p-4 gap-8">
+        {projectsContent.map((project, idx) => {
           return (
-            <SplideSlide key={project.title+" "+index} className="py-8">
-              <div className="bg-zinc-600 rounded-lg my-8 flex flex-col h-full justify-between">
-                <Image
-                  src={project.urlImage}
-                  height={300}
-                  width={500}
-                  alt={`Project ${project.title}`}
-                  className="rounded-lg mx-auto"
-                />
-                <h3 className="text-2xl my-2">{project.title}</h3>
-                <p className="px-4 indent-4 text-lg">{project.description}</p>
-                <a className="py-6 px-6 my-4 mx-4 bg-slate-900 rounded-lg text-2xl" href={project.urlImage}>
-                  Ver no github
-                </a>
+            <div key={project.title} className="grid grid-cols-2 bg-slate-700 bg-opacity-50 rounded-lg">
+              <div className="p-4">
+                <h3 className="text-2xl font-bold">{project.title}</h3>
+                <p>{project.description}</p>
               </div>
-            </SplideSlide>
-          );
+              <div className="p-4">
+                <Image src={project.urlImage} width={800} height={600} alt={project.title} className="rounded-lg" />
+              </div>
+            </div>
+          )
         })}
-      </Splide>
+      </div>
+
     </section>
   );
 }

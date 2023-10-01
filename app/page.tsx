@@ -50,7 +50,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="min-h-full w-full bg-zinc-900 text-gray-200 overflow-hidden relative">
+    <div className="w-full bg-slate-900 text-gray-300 overflow-hidden relative">
       <Background />
       <Header navbarItens={headerProps} />
       <div className='flex flex-col gap-8 max-w-6xl mx-auto overflow-hidden relative'>
