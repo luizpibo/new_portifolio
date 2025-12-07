@@ -10,33 +10,33 @@ export interface IProps extends React.HTMLProps<HTMLDivElement> {
 }
 const content = [
   {
+    title: "Arquitetura de Software",
+    description: "Experiência em projetar arquiteturas SaaS Multi-Tenant, Orientada a Eventos e baseada em Microserviços. Aplicação de Domain-Driven Design (DDD), Clean Architecture e princípios SOLID para criar sistemas robustos, escaláveis e manuteníveis.",
+    img: "",
+  },
+  {
+    title: "Liderança Tecnológica",
+    description: "Como Cofundador da Interage.ai, lidero decisões tecnológicas end-to-end, desde a escolha do stack até a implementação. Experiência em transformar visões de negócio em produtos de tecnologia escaláveis e inteligentes.",
+    img: "",
+  },
+  {
+    title: "Sistemas em Tempo Real",
+    description: "Desenvolvimento de sistemas de comunicação de alta performance com WebSockets nativos, projetados para baixa latência e alta concorrência. Experiência em construir soluções que suportam múltiplos usuários simultâneos e volume crescente de eventos em tempo real.",
+    img: "",
+  },
+  {
+    title: "Engenharia de Dados & IA",
+    description: "Experiência prática como Engenheiro de Dados no AI.Labs (UnB), desenvolvendo pipelines ETL, engenharia de features e infraestrutura de dados para projetos de Machine Learning e Inteligência Artificial.",
+    img: "",
+  },
+  {
     title: "Desenvolvimento Full Stack",
-    description: "Sou um desenvolvedor full stack apaixonado por transformar ideias criativas em soluções digitais inovadoras. Tenho conhecimento abrangente em todas as fases do desenvolvimento, desde o design de interfaces até a implementação de funcionalidades complexas no back-end.",
+    description: "Domínio completo do ciclo de desenvolvimento, desde front-end (Next.js, React) até back-end (Node.js, TypeScript, Python). Experiência com bancos de dados (PostgreSQL, Redis), ORMs (Drizzle) e otimização de performance.",
     img: "",
   },
   {
-    title: "Especialista em React",
-    description: "Tenho expertise significativa em React, uma das tecnologias mais poderosas para criar interfaces de usuário dinâmicas e responsivas. Minha habilidade em React me permite criar experiências de usuário fluidas e interativas.",
-    img: "",
-  },
-  {
-    title: "Estágio em Inteligência Artificial",
-    description: "Atualmente, estou estagiando em um laboratório de inteligência artificial na Universidade de Brasília (UnB), onde estou imerso no mundo fascinante da IA. Estou trabalhando em projetos inovadores que exploram algoritmos de aprendizado de máquina e visão computacional para resolver problemas do mundo real.",
-    img: "",
-  },
-  {
-    title: "Resolução Criativa de Problemas",
-    description: "Minha abordagem para o desenvolvimento é centrada em encontrar soluções criativas e eficientes para desafios complexos. Estou constantemente buscando maneiras inovadoras de abordar problemas técnicos, garantindo que meus projetos se destaquem.",
-    img: "",
-  },
-  {
-    title: "Paixão por Aprender",
-    description: "Estou sempre ávido por aprender novas tecnologias e aprimorar minhas habilidades. O campo da tecnologia está em constante evolução, e estou dedicado a me manter atualizado para oferecer as melhores soluções aos meus clientes e colaboradores.",
-    img: "",
-  },
-  {
-    title: "Colaboração e Comunicação",
-    description: "Acredito na importância da colaboração e comunicação eficaz em equipes de desenvolvimento. Trabalhar em projetos multidisciplinares e comunicar ideias de forma clara são habilidades que valorizo e pratico em todos os meus projetos.",
+    title: "DevOps & Infraestrutura",
+    description: "Conhecimento em conteinerização (Docker), administração de servidores Linux, cloud computing (AWS, Supabase) e implementação de pipelines CI/CD. Foco em criar infraestrutura escalável e resiliente.",
     img: "",
   },
 ]
