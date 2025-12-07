@@ -42,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br" className={`${roboto_mono.variable} min-h-screen`}>
-      <body>{children}</body>
+    <html lang="pt-br" className={`${roboto_mono.variable}`}>
+      <body className="min-h-screen bg-slate-950 text-gray-300 antialiased">{children}</body>
     </html>
   )
 }
