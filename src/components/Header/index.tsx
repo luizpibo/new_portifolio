@@ -15,7 +15,6 @@ const Header:React.FC<IProps> = ({navbarItens}) => {
       const handleScroll = () => {
         setScrolled(window.pageYOffset > 50);
 
-        // Detectar seção ativa
         const sections = navbarItens.map(item => item.url.replace('#', ''));
         for (const section of sections) {
           const element = document.getElementById(section);
@@ -37,11 +36,11 @@ const Header:React.FC<IProps> = ({navbarItens}) => {
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled
-        ? "py-3 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50 shadow-lg shadow-black/20"
-        : "py-5 bg-transparent"
+        ? "py-3 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800/50"
+        : "py-4 bg-transparent"
     }`}>
-      <nav className="max-w-7xl mx-auto px-4">
-        <ul className="flex gap-2 md:gap-4 justify-center items-center flex-wrap">
+      <nav className="max-w-3xl mx-auto px-4">
+        <ul className="flex gap-1 justify-center items-center flex-wrap">
           {navbarItens.map((item) => {
             const isActive = activeSection === item.url.replace('#', '');
             return (
@@ -49,21 +48,14 @@ const Header:React.FC<IProps> = ({navbarItens}) => {
                 <a
                   href={item.url}
                   className={`
-                    relative px-4 py-2 rounded-lg text-sm md:text-base font-medium transition-all duration-300
+                    px-3 py-1.5 rounded-md text-sm transition-colors duration-200
                     ${isActive
-                      ? "text-cyan-400 bg-cyan-500/10"
-                      : "text-gray-400 hover:text-cyan-300 hover:bg-slate-800/50"
+                      ? "text-white bg-neutral-800"
+                      : "text-neutral-500 hover:text-neutral-300"
                     }
-                    group
                   `}
                 >
                   {item.title}
-                  {/* Underline animado */}
-                  <span className={`
-                    absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500
-                    transform transition-transform duration-300 origin-left
-                    ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}
-                  `}></span>
                 </a>
               </li>
             )
